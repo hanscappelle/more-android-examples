@@ -14,5 +14,13 @@ Hosted at https://github.com/hanscappelle/menu-drawer-compat-example
 
 Basic on Android device file unzipping
 
+(incomplete)
+
+## Weather Forecast
+
+A weather forecast app based on the forecast lib hosted at https://github.com/hanscappelle/android-forecast-lib
+
+(TODO)
+
 
 
