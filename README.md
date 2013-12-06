@@ -4,6 +4,10 @@ Main project info goes here
 
 # Projects
 
+## Base Project
+
+Ignore this one since it nothing more than a basic Android Eclipse project. This is used for creating new examples only. 
+
 ## Actionbar compat & Menu Drawer
 
 Example based on the official Android ActionBar example but now implemented with the actionbar compat implementation and a menu drawer added. This is how to use the menu drawer (aka sliding menu) and actionbar on 2.1 and up devices.
