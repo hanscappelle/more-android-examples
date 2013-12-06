@@ -4,5 +4,9 @@
     <string name="app_name">testunzip</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    
+    <string name="current_file">Current File </string>
+    <string name="pick_file">Pick a File</string>
+    <string name="extract_zip">Extract Zip</string>
 
 </resources>

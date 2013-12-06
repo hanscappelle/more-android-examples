@@ -9,16 +9,23 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/hello"
+        android:id="@+id/current_file"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/current_file" />
 
     <Button
-        android:id="@+id/buttonExtract"
+        android:id="@+id/btn_pick_file"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hello"
-        android:text="extract" />
+        android:layout_below="@id/current_file"
+        android:text="@string/pick_file" />
+    
+    <Button
+        android:id="@+id/btn_extract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_pick_file"
+        android:text="@string/extract_zip" />
 
 </RelativeLayout>

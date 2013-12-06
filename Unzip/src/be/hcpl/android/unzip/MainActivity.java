@@ -10,12 +10,14 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.testunzip.R;
 
@@ -31,20 +33,43 @@ import com.example.testunzip.R;
  */
 public class MainActivity extends Activity {
 
+	private static final int PICKFILE_RESULT_CODE = 123;
+
+	private String zipFilePath = null;
+
+	private TextView currentFileView = null;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		// set layout
 		setContentView(R.layout.activity_main);
 
-		((Button) findViewById(R.id.buttonExtract)).setOnClickListener(new OnClickListener() {
+		// listener on pick a file button
+		((Button) findViewById(R.id.btn_extract)).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				pickAFile();
+			}
+		});
+
+		// listener on extract button
+		((Button) findViewById(R.id.btn_extract)).setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 
 				// since we pass null here this will fall back to the defaults
-				extractZip(null, null);
+				extractZip(null);
 			}
 		});
+
+		// get a ref to current file view
+		currentFileView = (TextView) findViewById(R.id.current_file);
+		// if not file set
+		currentFileView.setText("assets/zipped.zip");
 	}
 
 	@Override
@@ -55,9 +80,36 @@ public class MainActivity extends Activity {
 	}
 
 	/**
+	 * start the pick a file intent
+	 */
+	private void pickAFile() {
+		// this probably only works for special file explorers
+//		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//		// TODO restrict to zip files here
+//		intent.setType("*/*");
+//		intent.addCategory(Intent.CATEGORY_DEFAULT);
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		//jump directly to the following file/folder
+		//Uri theFileUri = Uri.fromFile(aFile);
+		//theIntent.setDataAndType("vnd.android.cursor.item/file");
+		intent.putExtra(Intent.EXTRA_TITLE,"A Custom Title"); //optional
+		startActivityForResult(intent, PICKFILE_RESULT_CODE);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == PICKFILE_RESULT_CODE) {
+			zipFilePath = data.getDataString();
+			if (currentFileView != null)
+				currentFileView.setText(zipFilePath);
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+
+	/**
 	 * helper to perform extraction of zip
 	 */
-	private void extractZip(final String zipFilePath, String targetFolderPath) {
+	private void extractZip(String targetFolderPath) {
 
 		InputStream inStream = null;
 		ZipInputStream zipStream = null;
@@ -65,7 +117,7 @@ public class MainActivity extends Activity {
 		try {
 			// fallback on the delivered zip file if no zipFile was given as an
 			// argument
-			inStream = zipFilePath == null ? getAssets().open(zipFilePath) : new FileInputStream(new File(zipFilePath));
+			inStream = zipFilePath == null ? getAssets().open("zipped.zip") : new FileInputStream(new File(zipFilePath));
 
 			// fallback on the application folder if no targetFolder was given
 			// as an argument
