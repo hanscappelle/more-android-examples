@@ -22,5 +22,9 @@ A weather forecast app based on the forecast lib hosted at https://github.com/ha
 
 (TODO)
 
+## Pick An Image
+
+Image selection in response to this SO question: http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically/2636538#2636538
+
 
 
