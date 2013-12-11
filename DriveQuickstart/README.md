@@ -4,7 +4,7 @@ This is a WORKING Google Drive Quickstart example. For instructions on how to se
 
 These changes are also listed at the following Stackoverflow question: http://stackoverflow.com/questions/17429798/usingoauth2-deprecated/20517193#20517193
 
-# Other updates required
+# Overview of required changes
 
 ## oAuth2 Method changed
 
