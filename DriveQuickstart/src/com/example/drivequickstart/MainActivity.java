@@ -41,8 +41,8 @@ public class MainActivity extends Activity {
     // also tested updating DRIVE to DRIVE_FILE both seem to work fine though the more specific the better
     credential = GoogleAccountCredential.usingOAuth2(this, Arrays.asList(new String[]{DriveScopes.DRIVE}));
     startActivityForResult(credential.newChooseAccountIntent(), REQUEST_ACCOUNT_PICKER);
-    
-    // chekc readme for other required changes
+
+    // check readme for other changes
   
   }
 
@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
           body.setTitle(fileContent.getName());
           body.setMimeType("image/jpeg");
 
-//          File file = service.files().insert(body, mediaContent).execute();
+          // File file = service.files().insert(body, mediaContent).execute();
           // update required for ocr
           File file = service.files().insert(body, mediaContent).setOcr(true).execute();
           
