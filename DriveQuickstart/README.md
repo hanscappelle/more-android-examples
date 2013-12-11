@@ -1,4 +1,3 @@
-
 # Project Description
 
 This is a WORKING Google Drive Quickstart example. For instructions on how to set up the project check the original documentation at https://developers.google.com/drive/quickstart-android . This is only a listing of the changes I had to make to get it working.
@@ -57,7 +56,7 @@ Also add the WRITE_EXTERNAL_STORAGE permission in your manifest:
 
 If you get an `com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAuthIOException` exception with in the root cause somewhere a description `Unknown` you should check the settings in the Google API console at https://cloud.google.com/console. I received this error on a package mismatch.
 
-Another links of interest are the oauth2 documentation at https://developers.google.com/accounts/docs/OAuth2 and the google api playground at ttps://developers.google.com/oauthplayground/.
+Another links of interest are the oauth2 documentation at https://developers.google.com/accounts/docs/OAuth2 and the google api playground at https://developers.google.com/oauthplayground/.
     
     // java.io.FileNotFoundException: /storage/emulated/0/Pictures/IMG_20131211_110629.jpg: open failed: EACCES (Permission denied)
     // and had to add the following permission to fix this
