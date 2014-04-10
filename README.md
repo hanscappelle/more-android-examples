@@ -14,6 +14,12 @@ Example based on the official Android ActionBar example but now implemented with
 
 Hosted at https://github.com/hanscappelle/menu-drawer-compat-example
 
+## Android Camera preview 
+
+This is a fork of mine of an already nice project with the required API checks in code and fallbacks for missing parameters. Check the original example if you need the tags to go through the different steps of preview configuration. 
+
+https://github.com/hanscappelle/CameraPreviewSample
+
 ## Unzip
 
 Basic on Android device file unzipping
