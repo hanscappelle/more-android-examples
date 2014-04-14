@@ -14,6 +14,8 @@ Hosted at [https://github.com/hanscappelle/menu-drawer-compat-example](https://g
 
 ## Fragment Based Navigation
 
+A simple project showing Fragment based navigation with responsive layout options and back navigation support.
+
 Example coming soon.
 
 (wip)
@@ -23,6 +25,19 @@ Example coming soon.
 This is a fork of mine of an already nice project with the required API checks in code and fallbacks for missing parameters. Check the original example if you need the tags to go through the different steps of preview configuration. 
 
 https://github.com/hanscappelle/CameraPreviewSample
+
+## Pick An Image
+
+Image selection in response to this SO question: http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically/2636538#2636538
+
+
+## Android REST Example
+
+Android App getting information from a REST backend over network. 
+
+Example coming soon.
+
+(wip)
 
 ## Unzip
 
@@ -35,10 +50,5 @@ Basic example for on Android device file unzipping.
 A weather forecast app based on the forecast lib hosted at https://github.com/hanscappelle/android-forecast-lib
 
 (wip)
-
-## Pick An Image
-
-Image selection in response to this SO question: http://stackoverflow.com/questions/2169649/get-pick-an-image-from-androids-built-in-gallery-app-programmatically/2636538#2636538
-
 
 
