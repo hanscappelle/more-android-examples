@@ -34,7 +34,7 @@ Basic example for on Android device file unzipping.
 
 A weather forecast app based on the forecast lib hosted at https://github.com/hanscappelle/android-forecast-lib
 
-(îp)
+(wip)
 
 ## Pick An Image
 
