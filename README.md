@@ -4,7 +4,7 @@ A GitHub repository collecting Android examples. For more information check proj
 
 ## Base Project
 
-Ignore this one since it nothing more than a basic Android Eclipse project. This is used for creating new examples only. 
+Ignore this one since it nothing more than a basic Android Eclipse project. This is used for creating new examples only. Some of our examples (mostly older ones) are still eclipse projects. If you really want them in Android Studio instead of ADT you can always use the import options from Android Studio (File > Import Project).
 
 ## Actionbar Compat & Menu Drawer
 
